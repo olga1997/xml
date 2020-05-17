@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Schema xmlns="urn:schemas-microsoft-com:xml-data"
+        xmlns:dt="urn:schemas-microsoft-com:datatypes">
+   <ElementType name="姓名"/>
+   <ElementType name="电话"/>   
+   <ElementType name="传真"/>
+   <ElementType name="地址"/>
+   <ElementType name="编号"/>
+   <ElementType name="名称"/>
+   <ElementType name="规格"/>
+   <ElementType name="价格"/>
+   <ElementType name="购买数量"/>
+   <ElementType name="客户" content="eltOnly">
+      <element type="姓名"/>
+      <element type="电话"/>
+      <element type="传真"/>
+      <element type="地址"/>
+   </ElementType>
+   <ElementType name="产品" content="eltOnly">
+      <element type="名称"/>
+      <element type="规格"/>
+      <element type="价格"/>
+      <element type="购买数量"/>
+   </ElementType>
+   <ElementType name="订单" content="eltOnly">
+      <element type="客户"/>
+      <element type="产品"/>
+   </ElementType>
+   <ElementType name="全部订单" content="eltOnly">
+      <element type="订单"/>
+   </ElementType>
+</Schema>
